@@ -526,7 +526,7 @@ async def task():
 							
 							tmp_sayMessage = bossData[i][0]
 							sayMessage = tmp_sayMessage[len(bossData[i][0])+1:]
-							await MakeSound(sayMessage + '젠 5분 전 입니다.', './sound/say')
+							await MakeSound(bossData[i][0] + ' 젠 5 분  전 입니다.', './sound/say')
 							#await client.get_channel(channel).send("```< " + msg.author.display_name + " >님이 \"" + sayMessage + "\"```", tts=False)
 							await PlaySound(voice_client1, './sound/say.wav')
 
@@ -543,7 +543,7 @@ async def task():
 							
 							tmp_sayMessage = bossData[i][0]
 							sayMessage = tmp_sayMessage[len(bossData[i][0])+1:]
-							await MakeSound(sayMessage + '젠 1분 전 입니다.', './sound/say')
+							await MakeSound(bossData[i][0] + ' 젠 1 분  전 입니다.', './sound/say')
 							#await client.get_channel(channel).send("```< " + msg.author.display_name + " >님이 \"" + sayMessage + "\"```", tts=False)
 							await PlaySound(voice_client1, './sound/say.wav')
 							
@@ -2236,7 +2236,7 @@ while True:
 			################ 명존쎄 ################ 
 
 			if message.content == command[7]:
-				await client.get_channel(channel).send( '< 보탐봇 명치 맞고 숨 고르기 중! 잠시만요! >', tts=False)
+				await client.get_channel(channel).send( '< 낭그리봇 명존쌔 맞고 숨 고르기 중! 잠시만요! >', tts=False)
 				for i in range(bossNum):
 					if bossMungFlag[i] == True:
 						bossTimeString[i] = tmp_bossTime[i].strftime('%H:%M:%S')
