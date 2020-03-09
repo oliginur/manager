@@ -572,7 +572,7 @@ async def task():
 					#await PlaySound(voice_client1, './sound/' + bossData[i][0] + '젠.mp3')
 					tmp_sayMessage = bossData[i][0]
 					sayMessage = tmp_sayMessage[len(bossData[i][0])+1:]
-					await MakeSound(bossData[i][0] + ' 젠 입니다.  ' + bossData[i][4], './sound/say')				
+					await MakeSound(bossData[i][0] + ' 젠 쿨 입니다.  ' + bossData[i][4], './sound/say')				
 					await PlaySound(voice_client1, './sound/say.wav')
 
 				################ 보스 자동 멍 처리 ################ 
