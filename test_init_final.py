@@ -522,7 +522,13 @@ async def task():
 								await client.get_channel(channel).send("```" + bossData[i][0] + ' ' + basicSetting[3] + '분 전 ' + bossData[i][3] + " [" +  bossTimeString[i] + "]" + '\n<' + bossData[i][6] + '>```', tts=False)
 							else :
 								await client.get_channel(channel).send("```" + bossData[i][0] + ' ' + basicSetting[3] + '분 전 ' + bossData[i][3] + " [" +  bossTimeString[i] + "]```", tts=False)
-							await PlaySound(voice_client1, './sound/' + bossData[i][0] + '알림1.mp3')
+							#await PlaySound(voice_client1, './sound/' + bossData[i][0] + '알림1.mp3')
+							
+							tmp_sayMessage = bossData[i][0]
+							sayMessage = tmp_sayMessage[len(bossData[i][0])+1:]
+							await MakeSound(sayMessage + '젠 5분 전 입니다.', './sound/say')
+							#await client.get_channel(channel).send("```< " + msg.author.display_name + " >님이 \"" + sayMessage + "\"```", tts=False)
+							await PlaySound(voice_client1, './sound/say.wav')
 
 				################ before_alert ################
 				if bossTime[i] <= priv and bossTime[i] > now:
@@ -533,7 +539,14 @@ async def task():
 								await client.get_channel(channel).send("```" + bossData[i][0] + ' ' + basicSetting[1] + '분 전 ' + bossData[i][3] + " [" +  bossTimeString[i] + "]" + '\n<' + bossData[i][6] + '>```', tts=False)
 							else :
 								await client.get_channel(channel).send("```" + bossData[i][0] + ' ' + basicSetting[1] + '분 전 ' + bossData[i][3] + " [" +  bossTimeString[i] + "]```", tts=False)
-							await PlaySound(voice_client1, './sound/' + bossData[i][0] + '알림.mp3')
+							#await PlaySound(voice_client1, './sound/' + bossData[i][0] + '알림.mp3')
+							
+							tmp_sayMessage = bossData[i][0]
+							sayMessage = tmp_sayMessage[len(bossData[i][0])+1:]
+							await MakeSound(sayMessage + '젠 1분 전 입니다.', './sound/say')
+							#await client.get_channel(channel).send("```< " + msg.author.display_name + " >님이 \"" + sayMessage + "\"```", tts=False)
+							await PlaySound(voice_client1, './sound/say.wav')
+							
 
 				################ 보스 젠 시간 확인 ################ 
 				if bossTime[i] <= now :
