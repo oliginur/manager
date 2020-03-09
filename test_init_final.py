@@ -526,7 +526,7 @@ async def task():
 							
 							tmp_sayMessage = bossData[i][0]
 							sayMessage = tmp_sayMessage[len(bossData[i][0])+1:]
-							await MakeSound(bossData[i][0] + ' 젠 5 분  전 입니다.', './sound/say')
+							await MakeSound(bossData[i][0] + ' 젠 7 분  전 입니다.', './sound/say')
 							#await client.get_channel(channel).send("```< " + msg.author.display_name + " >님이 \"" + sayMessage + "\"```", tts=False)
 							await PlaySound(voice_client1, './sound/say.wav')
 
